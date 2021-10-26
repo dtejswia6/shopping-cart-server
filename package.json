@@ -8,7 +8,6 @@
   "engines": {
     "node": "14.17.6"
   },
-
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -23,12 +22,15 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "push":"git add . && git commit -m 'changes' &&  git push"
+    "push": "git add . && git commit -m 'changes' &&  git push"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
+    "@nestjs/mapped-types": "*",
+    "@nestjs/mongoose": "^9.0.1",
     "@nestjs/platform-express": "^8.0.0",
+    "mongoose": "^6.0.12",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0"
